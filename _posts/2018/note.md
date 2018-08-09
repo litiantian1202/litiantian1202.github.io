@@ -1,7 +1,7 @@
 ---
-title: 一些工具的安装
+title: 工具的安装
 date: 2018/08/05
-author: PengJiyuan
+author: Litiantian
 tag: 备忘
 intro: 这里记录了我的一些备忘的操作和命令，这个备忘录较早，其中可能大部分都不使用了!
 ---
