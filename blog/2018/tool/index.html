@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/css/markdown.css" rel="stylesheet" />
+    <link href="/static/css/highlight.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/static/images/common/favicon.ico" type="image/x-icon" />
+    <link href="/static/css/blog.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="center">
+        <h1 class="title">grep sed awk</h1>
+        <p class="author"><img src="/static/images/common/favicon.ico" />litiantian | 原创</p>
+        <p class="intro">My Way</p>
+      </div>
+    </header>
+    <div class="markdown-body">
+      <div class="copyright">
+        本文由 <a href="http://github.com/litiantian1202">litiantian</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0</a> 国际许可协议进行许可, 可自由转载、引用，但需署名作者且注明文章出处
+      </div>
+      <h1 id="grep-">grep使用</h1>
+<pre><code class="language-bash">grep -[acinv] <span class="hljs-string">'字符串'</span> filename
+
+  -a 以文本方式搜索
+
+  -c 计算找到符合行的数目
+
+  -n 顺便输出符合条件的行号
+
+  -i 忽略大小写
+
+  -v 反向查找（即找到不符合查找条件的行）
+
+  [^g] 表示除g之外的其他字符</code></pre>
+<pre><code class="language-bash">`grep -n <span class="hljs-string">'root'</span> /etc/passwd`  搜索包含root字段的行，并输出行号。
+
+`grep -nv <span class="hljs-string">'root'</span> /etc/passwd`  搜索没有包含root字段的行，并输出行号。
+
+`grep -n <span class="hljs-string">'t[as]st'</span> /etc/passwd`   搜索包含t[as]st 字符，其中[]表示包含a或者s。
+
+`grep -n <span class="hljs-string">'[^g]oo'</span> /etc/passwd `   搜索oo前没有g字符的所在行。
+
+[a-z0-9A-Z]表示所有数字与英文字符，^表示行的开始 $ 表示行的末尾，^$表示空行
+
+`grep -n <span class="hljs-string">'ooo*'</span> regular_express.txt`  前两个o一定存在，第三个o可没有，也可有多个。
+
+. * 只能限制0个或多个， 如果要确切的限制字符重复数量，就用{范围} 。范围是数字用,隔开 2,5 表示2~5个, 2表示2个，2, 表示2到更多个
+
+`grep -v <span class="hljs-string">'^
+    </div>
+    <footer class="copyright">
+      <span><b><a href="http://github.com/litiantian1202">Litiantian</a></b> All rights reserved</span>
+    </footer>
+    <script>
+      var header = document.getElementById('header');
+      var themes = [
+        'mooonlit', 'cool_blue', 'evening_sunshing', 'memariani', 'kye_meh',
+        'by_design', 'red_sunset', 'pun_yeta', 'nepal', 'deep_space', 'curiosity_blue',
+        'purple_bliss', 'miaka', 'sky'
+      ];
+      function random(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      const theme = themes[random(0, themes.length - 1)];
+      header.classList.add(theme);
+    </script>
+  </body>
+</html>
+</span> regular_express.txt | grep -v <span class="hljs-string">'^#'</span>`  等同与 `egrep -v <span class="hljs-string">'^$|^#'</span> regular_express.txt`
+    搜索去除空行和<span class="hljs-comment">#开头的行</span></code></pre>
+
+    </div>
+    <footer class="copyright">
+      <span><b><a href="http://github.com/litiantian1202">Litiantian</a></b> All rights reserved</span>
+    </footer>
+    <script>
+      var header = document.getElementById('header');
+      var themes = [
+        'mooonlit', 'cool_blue', 'evening_sunshing', 'memariani', 'kye_meh',
+        'by_design', 'red_sunset', 'pun_yeta', 'nepal', 'deep_space', 'curiosity_blue',
+        'purple_bliss', 'miaka', 'sky'
+      ];
+      function random(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      const theme = themes[random(0, themes.length - 1)];
+      header.classList.add(theme);
+    </script>
+  </body>
+</html>
