@@ -51,11 +51,11 @@
 
 [a-z0-9A-Z]表示所有数字与英文字符，^表示行的开始 $ 表示行的末尾，^$表示空行
 
-`grep -n <span class="hljs-string">'ooo*'</span> regular_express.txt`  前两个o一定存在，第三个o可没有，也可有多个。
+grep -n <span class="hljs-string">'ooo*'</span> regular_express.txt
 
-. * 只能限制0个或多个， 如果要确切的限制字符重复数量，就用{范围} 。范围是数字用,隔开 2,5 表示2~5个, 2表示2个，2, 表示2到更多个
+前两个o一定存在，第三个o可没有，也可有多个, . * 只能限制0个或多个， 如果要确切的限制字符重复数量，就用{范围} 。范围是数字用,隔开 2,5 表示2~5个, 2表示2个，2, 表示2到更多个
 
-`grep -v <span class="hljs-string">'^
+grep -v <span class="hljs-string">'^
     </div>
     <footer class="copyright">
       <span><b><a href="http://github.com/litiantian1202">Litiantian</a></b> All rights reserved</span>
@@ -75,9 +75,10 @@
     </script>
   </body>
 </html>
-</span> regular_express.txt | grep -v <span class="hljs-string">'^#'</span>`  等同 `egrep -v <span class="hljs-string">'^$|^#'</span> regular_express.txt`
+</span> regular_express.txt | grep -v <span class="hljs-string">'^#'</span>  等同 egrep -v <span class="hljs-string">'^$|^#'</span> regular_express.txt
 
-  搜索去除空行和<span class="hljs-comment">#开头的行</span></code></pre>
+  搜索去除空行和<span class="hljs-comment">#开头的行</span>
+</code></pre>
 
     </div>
     <footer class="copyright">

@@ -24,19 +24,19 @@ grep -[acinv] '字符串' filename
 ```
 
 ```bash
-`grep -n 'root' /etc/passwd` 
+grep -n 'root' /etc/passwd 
 
    搜索包含root字段的行，并输出行号。
 
-`grep -nv 'root' /etc/passwd`  
+grep -nv 'root' /etc/passwd  
 
   搜索没有包含root字段的行，并输出行号。
 
-`grep -n 't[as]st' /etc/passwd`   
+grep -n 't[as]st' /etc/passwd   
 
   搜索包含t[as]st 字符，其中[]表示包含a或者s。
 
-`grep -n '[^g]oo' /etc/passwd `
+grep -n '[^g]oo' /etc/passwd
 
   搜索oo前没有g字符的所在行。
 
