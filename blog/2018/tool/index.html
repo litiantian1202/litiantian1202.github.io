@@ -33,13 +33,21 @@
   -v 反向查找（即找到不符合查找条件的行）
 
   [^g] 表示除g之外的其他字符</code></pre>
-<pre><code class="language-bash">`grep -n <span class="hljs-string">'root'</span> /etc/passwd`  搜索包含root字段的行，并输出行号。
+<pre><code class="language-bash">`grep -n <span class="hljs-string">'root'</span> /etc/passwd` 
 
-`grep -nv <span class="hljs-string">'root'</span> /etc/passwd`  搜索没有包含root字段的行，并输出行号。
+   搜索包含root字段的行，并输出行号。
 
-`grep -n <span class="hljs-string">'t[as]st'</span> /etc/passwd`   搜索包含t[as]st 字符，其中[]表示包含a或者s。
+`grep -nv <span class="hljs-string">'root'</span> /etc/passwd`  
 
-`grep -n <span class="hljs-string">'[^g]oo'</span> /etc/passwd `   搜索oo前没有g字符的所在行。
+  搜索没有包含root字段的行，并输出行号。
+
+`grep -n <span class="hljs-string">'t[as]st'</span> /etc/passwd`   
+
+  搜索包含t[as]st 字符，其中[]表示包含a或者s。
+
+`grep -n <span class="hljs-string">'[^g]oo'</span> /etc/passwd `
+
+  搜索oo前没有g字符的所在行。
 
 [a-z0-9A-Z]表示所有数字与英文字符，^表示行的开始 $ 表示行的末尾，^$表示空行
 
@@ -67,8 +75,9 @@
     </script>
   </body>
 </html>
-</span> regular_express.txt | grep -v <span class="hljs-string">'^#'</span>`  等同与 `egrep -v <span class="hljs-string">'^$|^#'</span> regular_express.txt`
-    搜索去除空行和<span class="hljs-comment">#开头的行</span></code></pre>
+</span> regular_express.txt | grep -v <span class="hljs-string">'^#'</span>`  等同 `egrep -v <span class="hljs-string">'^$|^#'</span> regular_express.txt`
+
+  搜索去除空行和<span class="hljs-comment">#开头的行</span></code></pre>
 
     </div>
     <footer class="copyright">
