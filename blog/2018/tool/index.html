@@ -33,51 +33,32 @@
   -v 反向查找（即找到不符合查找条件的行）
 
   [^g] 表示除g之外的其他字符</code></pre>
-<pre><code class="language-bash">`grep -n <span class="hljs-string">'root'</span> /etc/passwd` 
+<p>grep的一些案例使用，可参考：<a href="https://blog.csdn.net/tenfyguo/article/details/6387786">https://blog.csdn.net/tenfyguo/article/details/6387786</a></p>
+<pre><code class="language-bash"><span class="hljs-comment">#grep -v ^$ regular_express.txt | grep -v '^#'  等同 egrep -v '^$|^#' regular_express.txt</span>
+
+   搜索去除空行和<span class="hljs-comment">#开头的行</span>
+
+<span class="hljs-comment">#grep -n 'root' /etc/passwd </span>
 
    搜索包含root字段的行，并输出行号。
 
-`grep -nv <span class="hljs-string">'root'</span> /etc/passwd`  
+<span class="hljs-comment">#grep -nv 'root' /etc/passwd  </span>
 
   搜索没有包含root字段的行，并输出行号。
 
-`grep -n <span class="hljs-string">'t[as]st'</span> /etc/passwd`   
+<span class="hljs-comment">#grep -n 't[as]st' /etc/passwd   </span>
 
   搜索包含t[as]st 字符，其中[]表示包含a或者s。
 
-`grep -n <span class="hljs-string">'[^g]oo'</span> /etc/passwd `
+<span class="hljs-comment">#grep -n '[^g]oo' /etc/passwd</span>
 
   搜索oo前没有g字符的所在行。
 
 [a-z0-9A-Z]表示所有数字与英文字符，^表示行的开始 $ 表示行的末尾，^$表示空行
 
-grep -n <span class="hljs-string">'ooo*'</span> regular_express.txt
+<span class="hljs-comment">#grep -n 'ooo*' regular_express.txt</span>
 
 前两个o一定存在，第三个o可没有，也可有多个, . * 只能限制0个或多个， 如果要确切的限制字符重复数量，就用{范围} 。范围是数字用,隔开 2,5 表示2~5个, 2表示2个，2, 表示2到更多个
-
-grep -v <span class="hljs-string">'^
-    </div>
-    <footer class="copyright">
-      <span><b><a href="http://github.com/litiantian1202">Litiantian</a></b> All rights reserved</span>
-    </footer>
-    <script>
-      var header = document.getElementById('header');
-      var themes = [
-        'mooonlit', 'cool_blue', 'evening_sunshing', 'memariani', 'kye_meh',
-        'by_design', 'red_sunset', 'pun_yeta', 'nepal', 'deep_space', 'curiosity_blue',
-        'purple_bliss', 'miaka', 'sky'
-      ];
-      function random(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-      }
-      const theme = themes[random(0, themes.length - 1)];
-      header.classList.add(theme);
-    </script>
-  </body>
-</html>
-</span> regular_express.txt | grep -v <span class="hljs-string">'^#'</span>  等同 egrep -v <span class="hljs-string">'^$|^#'</span> regular_express.txt
-
-  搜索去除空行和<span class="hljs-comment">#开头的行</span>
 </code></pre>
 
     </div>
